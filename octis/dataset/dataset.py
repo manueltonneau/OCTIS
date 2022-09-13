@@ -244,7 +244,7 @@ class Dataset:
         vocabulary = []
         file = Path(file_name)
         if file.is_file():
-            with open(file_name, 'r') as vocabulary_file:
+            with open(file_name, 'rb') as vocabulary_file:
                 for line in vocabulary_file:
                     vocabulary.append(line.strip())
             self.__vocabulary = vocabulary
